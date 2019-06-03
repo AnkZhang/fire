@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>企业智慧能源管理软件</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/common/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/login/login.css" rel="stylesheet">
+    <script type="text/javascript" src="js/common/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="bg-login">
+    <p style="color:white;font-size: 28px;padding:20px">企业智慧能源管理软件<b style="font-family:'Microsoft YaHei'">EMS</b></p>
+    <div class="logo">
+        <!--<img src="img/logo.png">-->
+    </div>
+    <div class="login-box">
+        <h2 style="color:#888">系统登录</h2>
+        <ul>
+            <form role="form" class="login-form">
+                <li class="input first mb20">
+                    <input type="text" name="username" placeholder="请输入用户名" class="form-username form-control">
+                    <span></span>
+                </li>
+                <li class="input second mb20">
+                    <input type="password" name="password" placeholder="请输入密码" class="form-password form-control">
+                    <span></span>
+                </li>
+                <li class="input third mb20" style="overflow: hidden;">
+                    <input type="text" name="validCode" placeholder="请输入验证码" class="form-username form-control" style="width:50%;float: left;" maxlength="4">
+                    <img class="" src="img/validImg.jpg" id="code" style="padding-left: 10px; float: left;height: 47px;">
+                    <span></span>
+                </li>
+                <li class="error-msg"></li>
+                <li class="mt20">
+                    <button class="btn">立即登录</button>
+                </li>
+            </form>
+        </ul>
+    </div>
+</div>
+<div class="login-bottom">
+    <p>Copyright2011-2022 上海科阿思智能科技有限公司 All Rights Reserved </p>
+</div>
+<script type="text/javascript" src="js/login/login.js"></script>
+</body>
+</html>

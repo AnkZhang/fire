@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>企业智慧能源管理软件</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script type="text/javascript" src="js/common/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery.jqprint.js"></script>
+    <script type="text/javascript" src="js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/common/common.js"></script>
+    <script type="text/javascript" src="js/common/dist.js"></script>
+    <script type="text/javascript" src="/common/sys/dict.js?jquery=1"></script>
+    <script type="text/javascript" src="js/common/echarts.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+    <script type="text/javascript" src="js/common/china.js"></script>
+    <script>
+        $(function () {
+            if (localStorage.username){
+                return
+            }else{
+                location.href = "login.html";
+            }
+        });
+    </script>
+</head>
+<body class="easyui-layout">
+<!--//顶部logo 登录用户信息-->
+<div class="header" data-options="region:'north',border:false">
+    <a href="index.html">
+        <img class="logoimg" src="/logo/logo.png">
+    </a>
+    <span class="custom-title">农业灌溉精细化能耗管理系统</span>
+    <div class="login-info button-bar">
+        <span class="welcome">欢迎来到农业灌溉精细化能耗管理系统:XXX</span>
+        <a href="javascript:void(0)" id="quit" class="quit" >X</a>
+    </div>
+</div>
+<!--//左侧导航目录-->
+<div class="content" id="nav" data-options="region:'west',title:''">
+    <!--<div title="项目概况"></div>-->
+    <!--<div title="地图导航"></div>-->
+    <!--<div title="实时数据"></div>-->
+    <!--<div title="能耗统计"></div>-->
+    <!--<div title="用电记录"></div>-->
+    <!--<div title="峰谷平尖"></div>-->
+    <!--<div title="设备预警"></div>-->
+    <!--<div title="区域管理"></div>-->
+    <!--<div title="设备管理"></div>-->
+    <!--<div title="用户管理"></div>-->
+</div>
+<script>
+</script>
+<div class="treeMenu"></div>
+<!--//内容显示区-->
+<div id="res" data-options="region:'center',title:''" class="res-bg" style="width:90%;min-height:550px;">
+</div>
+<!--//对话框-->
+<div id="dlg" class="easyui-dialog" title="Info" style="display:none;width:400px;min-height:200px;padding:10px;color:red;font-weight:bold"></div>
+<!--//excel下载区-->
+<div id="downLoad"></div>
+<!--//内容修改对话框-->
+<div id="modifyWindow" class="easyui-window" title="详细信息" data-options="iconCls:'icon-save'"
+     style="width:550px;padding:10px;">
+    <form id="winform">
+    </form>
+</div>
+<div id="pvWindow" class="easyui-window" title="详细信息" data-options="iconCls:'icon-save'"
+     style="width:60%;">
+</div>
+<script type="text/javascript" src="js/keasiQP.js"></script>
+<script>
+    window.onbeforeunload = function () {
+        logout();
+    }
+</script>
+</body>
+</html>

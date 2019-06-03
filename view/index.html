@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>科阿思农业灌溉系统</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/demo.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <script type="text/javascript" src="../js/common/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common/jquery.jqprint.js"></script>
+    <script type="text/javascript" src="../js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../js/common/common.js"></script>
+    <script type="text/javascript" src="../js/common/echarts.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+</head>
+<body class="easyui-layout">
+<!-- //顶部logo 登录用户信息 -->
+<div class="header" data-options="region:'north',border:false">
+    <a href="../view/index.html">
+        <img class="logoimg" src="../img/keasilogo.png">
+    </a>
+    <span class="custom-title">科阿思农业灌溉系统</span>
+    <div class="login-info button-bar">
+        <span class="welcome">欢迎来到科阿思农业灌溉系统:XXX</span>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'">退出</a>
+    </div>
+</div>
+<!-- //左侧导航目录 -->
+<div class="easyui-accordion content" data-options="region:'west',title:''">
+    <div title="项目概况" id="projectinfo"></div>
+    <div title="地图导航" id="navmap"></div>
+    <div title="实时数据" id="realdata">
+        <!--data-options URL后面可直接异步加载数据来生成树形目录；数据格式参考view/data1.json-->
+        <ul id="tt" class="easyui-tree" data-options="url:'data1.json',method:'get',animate:true,lines:false"></ul>
+    </div>
+    <div title="能耗统计" id="reportdata">
+        <!--data-options URL后面可直接异步加载数据来生成树形目录；数据格式参考view/data1.json-->
+        <ul id="dt" class="easyui-tree" data-options="url:'data1.json',method:'get',animate:true,lines:false"></ul>
+    </div>
+    <div title="区域管理"></div>
+    <div title="设备管理"></div>
+    <div title="用户管理"></div> 
+    <div title="客户管理"></div> 
+</div>
+<!-- //内容显示区 -->
+<div id="res" data-options="region:'center',title:''">
+</div>
+<!-- //对话框 -->
+<div id="dlg" class="easyui-dialog" title="Info" style="display:none;width:400px;min-height:200px;padding:10px;color:#e4393c;font-weight:bold"></div>
+<!-- //excel下载区 -->
+<div id="downLoad"></div>
+<!-- //内容修改对话框 -->
+<div id="modifyWindow" class="easyui-window" title="详细信息" data-options="iconCls:'icon-save'"
+     style="width:550px;padding:10px;">
+    <form id="winform">
+    </form>
+</div>
+<script type="text/javascript" src="../js/keasiQP.js"></script>
+</body>
+</html>
